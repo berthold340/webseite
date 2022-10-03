@@ -10,19 +10,28 @@
 </head>
 <body class="bg-dark p-5">
     <h1 class="text-white">Bertholds Webseite</h1>
-    <div class=" bg-primary bg-gradient p-3">
+    <div class="rounded bg-primary bg-gradient p-3">
         <h2>Meine Lieblingsvideos</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/k-A5bRan6-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mkDVjaxAAv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/8Ai5qAFmXRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/iRwSQo4_4a4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        <iframe width="560" height="315" src="https://www.youtube.com/embed/74otqUWjGWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/qiY2e5wbH3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="m-1" width="560" height="315" src="https://www.youtube.com/embed/k-A5bRan6-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        <iframe class="m-1" width="560" height="315" src="https://www.youtube.com/embed/mkDVjaxAAv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="m-1" width="560" height="315" src="https://www.youtube.com/embed/8Ai5qAFmXRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
     </div>
+    <br>
 
-    <div class=" bg-secondary bg-gradient p-3">
+    <div class="rounded bg-secondary bg-gradient p-3">
         <h2>Meine Streams</h2>    
-        <iframe src="https://player.twitch.tv/?channel=montanablack88&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>        <iframe width="560" height="315" src="https://www.youtube.com/embed/74otqUWjGWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+        <div id="twitch-embed"></div>
+
+            <!-- Load the Twitch embed script -->
+            <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+            
+            <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+            <script type="text/javascript">
+            new Twitch.Player("twitch-embed", {
+                channel: "blockhunter38"
+            });
+            </script>
+        </div>
 
 </body>
 </html>
